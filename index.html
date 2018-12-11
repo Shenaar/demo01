@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Places</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW0EVGUXbmMldzUxYliptqE_h8WWR8vqU&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Permanently closed restaurants in Ontario, Canada</h1>
+        <table id="main-table" class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Vicinity
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="map"></div>
+    </div>
+    <script>
+
+
+
+    $(function () {
+        let response = {
+    "html_attributions" : [],
+    "next_page_token" : "CsQCNwEAAIWkAWwrRJUsMQ3flMt2Y8TMYW16OqpYA0071KZumHvE--xZBMsWbdu-r1td7erDB-dfMwqnRHDEYw8JRjY_jpazpyZsCD6ROMV3k4BZxI1yBsFGTjqgiA5mj2_u00oZXp49a0cwJ5dfq5ZL5cogxj0dXJUCCkZz8y9UENtZQVK5-335PxfSTE06yv2BpSWuYOEjpR4PjqT-wJoJXpWIHPPSfy-vnkfrPNBv5NBI8nWyEID7YHh7PB0NkLTCXZJSbpsomFmV0z5r9aD_mQZv8rEx4dX0t_mKfwPHoGyakBPNkNiarabC-nfp_cDE9sCSv8TfvdvqDBWP2GvBeUDcwXigLc0KPKwib-qWMgQImKrH7y0srETJkMnTYdXrz8MQTIU4WCNSbkRWi4UXaoCXjKVfSetsGusNsBEPtPWCuX7zEhC_bRV5TCR_Ht01Smvjm5WRGhTcM9Q2c9R_W1Ejqfffh7JXokuQAA",
+    "results" : [
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.978776,
+                    "lng" : -118.035727
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.98028492989273,
+                        "lng" : -118.0343759201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.97758527010728,
+                        "lng" : -118.0370755798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "7611b9ebfc7eb1a56dde59ee308f863166d62cda",
+            "name" : "Ciao Italia Ristorante",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2840,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/113861460624546224738/photos\"\u003eCiao Italia Ristorante\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAEYD4W-YFv_5uINzyymnpIEuFhDICpH1TXAV6SGHfCSn6Wv5K5USX1s_Wu15dUihPFzq8raKd4npj5C_WrxoIR2P0HwwIWzSl7aa6O6dl9jaEfx61Jl2kZp8tFp4suK2OEhBhba6f602JC7M9Pel89o_XGhTGgNgkDyS8t2iKUcRy7V5Uzuxduw",
+                    "width" : 4256
+                }
+            ],
+            "place_id" : "ChIJy_USfOzTwoARzKPmPOIBjpg",
+            "plus_code" : {
+                "compound_code" : "XXH7+GP Whittier, California",
+                "global_code" : "8553XXH7+GP"
+            },
+            "price_level" : 2,
+            "rating" : 4.6,
+            "reference" : "ChIJy_USfOzTwoARzKPmPOIBjpg",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "13112 Philadelphia St, Whittier"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 34.1989047,
+                    "lng" : -118.1888748
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 34.20025452989272,
+                        "lng" : -118.1875249701072
+                    },
+                    "southwest" : {
+                        "lat" : 34.19755487010728,
+                        "lng" : -118.1902246298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "3f70569e0f1704c8a1b9acb9fe72fc0187252a53",
+            "name" : "The Proper Restaurant & Bar",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 3024,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/115147283214395427265/photos\"\u003eJUSTiN FONG\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA-9_rDUxA97iabujTRiYAhY1P9P64dqp7On141BoqFtyenCHmBYzjN95f-i8_2vTqku-sAO07cjXlblDms7TIumEKER2WHimYR6iVnCADMUIDxWqQR2L8hONG0sIroLl-EhDa97KWYhqNfVpPAdsds2thGhQ9dn84nE_2lkl8DcVnhxAebtPaKA",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJvRzhrQ7CwoARrjye7UDCTGk",
+            "plus_code" : {
+                "compound_code" : "5RX6+HF La Cañada Flintridge, California",
+                "global_code" : "85635RX6+HF"
+            },
+            "price_level" : 2,
+            "rating" : 4,
+            "reference" : "ChIJvRzhrQ7CwoARrjye7UDCTGk",
+            "scope" : "GOOGLE",
+            "types" : [ "bar", "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "464 Foothill Blvd, La Cañada Flintridge"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.759656,
+                    "lng" : -118.148065
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.76100407989272,
+                        "lng" : -118.1466927201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.75830442010728,
+                        "lng" : -118.1493923798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "e856ff4f6da64900ea8c97218c3072440c8610cf",
+            "name" : "Art & Craft Eatery",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2848,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/109741675866699435639/photos\"\u003eA Google User\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA9VhKF54MkIFEpjkP58qzSyftwEQyduNiqNym6lucq71zbXdj6koKgM6LYEWX2YRvvaD_Ff782acdTz_V9YVyOAqxG2Vgfkr8F912rGYhTNbRI4WZbfBSD40xL65HC4xkEhCMAsi_gkpl0GOEyGxp3NAMGhQwFzeS9sf8_4PDB-50D284mBJPSg",
+                    "width" : 4272
+                }
+            ],
+            "place_id" : "ChIJ_VmhqZ8z3YARHKowBCQMgV0",
+            "plus_code" : {
+                "compound_code" : "QV52+VQ Long Beach, California",
+                "global_code" : "8553QV52+VQ"
+            },
+            "rating" : 4.5,
+            "reference" : "ChIJ_VmhqZ8z3YARHKowBCQMgV0",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "19 39th Pl, Long Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.7747622,
+                    "lng" : -117.9172508
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.77615917989273,
+                        "lng" : -117.9159881701073
+                    },
+                    "southwest" : {
+                        "lat" : 33.77345952010728,
+                        "lng" : -117.9186878298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "be22187e9f8561a688a6f71fb42e23b5f3090de3",
+            "name" : "Fa-Sai Thai Cuisine",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2268,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/100025679030451760823/photos\"\u003eAndrew Kim\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAbLyAB8LQZwBX6uHoRXVQuqrkWmOAkoETO-c2FR1t7mp95KmkGkanAPeAJVLEyGARVNtCkk4qoW2zYFJbEMsmezFpY73-DAcHvt5FszxS9mZhUjfGju9R-VFTbaP1zwJhEhD5pgRM8_Vj-2HxJgar_jTDGhQMkHtw_Tezt3QUTu0N_QlR7THllQ",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJ7YmryAPY3IARtlJduv6H2JY",
+            "plus_code" : {
+                "compound_code" : "Q3FM+W3 Garden Grove, California",
+                "global_code" : "8554Q3FM+W3"
+            },
+            "price_level" : 1,
+            "rating" : 4.4,
+            "reference" : "ChIJ7YmryAPY3IARtlJduv6H2JY",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "12910 Harbor Blvd, Garden Grove"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.7586686,
+                    "lng" : -118.1139377
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.75993442989272,
+                        "lng" : -118.1124879701072
+                    },
+                    "southwest" : {
+                        "lat" : 33.75723477010727,
+                        "lng" : -118.1151876298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "66c044f1453d5486a61c756aedaa19672a08f42e",
+            "name" : "Forbidden City Restaurant",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2268,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/102707062696991585435/photos\"\u003eA Google User\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAAwcj-lcZD2wOI8Fg20mxgnNAtd5BGTLOiSwezHZIQ-DuHWkgXICs5qLlCtiTgCGULMq1487Ip-8uootExbt9nEYg4jB4uHLn0WOEU6dZ7TuqsFLX4u8vK5pFKMH2rDHUEhBg-2SojiCh1Og_YKcOfpnJGhRjw_qI5nhNlzYTtiVL_Cx01044qA",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJEXWygdgv3YAR-Jos2Mo7HZU",
+            "plus_code" : {
+                "compound_code" : "QV5P+FC Long Beach, California",
+                "global_code" : "8553QV5P+FC"
+            },
+            "price_level" : 2,
+            "rating" : 3.9,
+            "reference" : "ChIJEXWygdgv3YAR-Jos2Mo7HZU",
+            "scope" : "GOOGLE",
+            "types" : [ "bar", "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "6380 E Pacific Coast Hwy, Long Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.678091,
+                    "lng" : -117.8867645
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.67949807989272,
+                        "lng" : -117.8855121201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.67679842010727,
+                        "lng" : -117.8882117798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "fac355bbe1c15d27ab68c4d784294944d8e331c6",
+            "name" : "Ecco Pizzeria & Bar",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 3024,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/101098721493984306069/photos\"\u003eSimon Kaulius\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAVNjiFji7zP31MmBocPyK48mhKxY5W_loddadIHcZxUElXfWZowJlZzwVM0lJbkvQP9xvOhOu5ges0NtagEpnkTAemB7xMH6Z-eKbwPLVVelDhzyWWutmvGs33H0cVRanEhCB7jzhFiT6P4daEdHN97rtGhS6gaAuMa6LlnAoshBjX4gKb7pIoQ",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJ2WMW1Rvf3IARWXBO_gNWfk8",
+            "plus_code" : {
+                "compound_code" : "M4H7+67 Costa Mesa, California",
+                "global_code" : "8554M4H7+67"
+            },
+            "price_level" : 2,
+            "rating" : 4.3,
+            "reference" : "ChIJ2WMW1Rvf3IARWXBO_gNWfk8",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "bar", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "2937 Bristol St A103, Costa Mesa"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.771927,
+                    "lng" : -118.182606
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.77316857989273,
+                        "lng" : -118.1812541201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.77046892010728,
+                        "lng" : -118.1839537798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "f211622b0078209b8605b964daf6c9bb0d100040",
+            "name" : "4th & Olive Bistro & Wine Bar",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 3024,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/114973403120696822282/photos\"\u003ePete Hernandez\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA-8qGCpqeSGuAXzEbBN2znjnr1xNdU_6sWb7laOomuxqBokcySs68B_jSmQzyb0DYT70TTSSZ6w7jEJL5mnVhRvxd-kYOhhHaRd5AYdKgLt3wlm82jGd4t0h6ifpyB_QoEhDYXlkVLKxUQa_JVAAigzJhGhQLMcvBfXdcGciYpeupetY2k6rMqA",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJQSy6Jz4x3YAR8LhkMcu3S9I",
+            "plus_code" : {
+                "compound_code" : "QRC8+QX Long Beach, California",
+                "global_code" : "8553QRC8+QX"
+            },
+            "price_level" : 2,
+            "rating" : 4.5,
+            "reference" : "ChIJQSy6Jz4x3YAR8LhkMcu3S9I",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "743 E 4th St, Long Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.761417,
+                    "lng" : -118.1368673
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.76267232989272,
+                        "lng" : -118.1355754701073
+                    },
+                    "southwest" : {
+                        "lat" : 33.75997267010728,
+                        "lng" : -118.1382751298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "162926a8966651be206a4581eccc678b207c896b",
+            "name" : "La Creperie Cafe",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2448,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/101918572990179957475/photos\"\u003eMike Ambrosi\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA_hjWfe5pmsW8vXIdu3s9YQLpTItsnFdzcM8zpSIVN5vMDGnc9aWgdG09ARsIDjgrhAhwdD310yqcAnlKutH2xotICCnogn0bECElOjBdfMpSnC6Z9HHKGEhPvjzfLXASEhCQXB2VhCh4M3iX5sqAOmQXGhTmThGZKxOQqDETq_5J1TOKGKtiag",
+                    "width" : 3264
+                }
+            ],
+            "place_id" : "ChIJa7cXGUow3YARfvIpvsbUIrs",
+            "plus_code" : {
+                "compound_code" : "QV67+H7 Long Beach, California",
+                "global_code" : "8553QV67+H7"
+            },
+            "price_level" : 2,
+            "rating" : 4.5,
+            "reference" : "ChIJa7cXGUow3YARfvIpvsbUIrs",
+            "scope" : "GOOGLE",
+            "types" : [
+                "meal_takeaway",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "vicinity" : "4911 E 2nd St, Long Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 34.0285022,
+                    "lng" : -118.0154906
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 34.02977977989272,
+                        "lng" : -118.0141579201073
+                    },
+                    "southwest" : {
+                        "lat" : 34.02708012010727,
+                        "lng" : -118.0168575798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "e7449161b4b1eab20d724de661740216c04617d0",
+            "name" : "Tepeyac Restaurant & Tequila Sports Bar",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2322,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/116002259562736669275/photos\"\u003eChris Corona\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAsy2J0NxNTtV5HDSDbq_1ObYQHiT0_a78-78h31592-aTVap_wJXW6P2O-HKi5igfLWjkDUpSM5wHmBnWQqo0fw_2InMIfu06oA1FJVGLNffCqfjN-2Lh4i8FW7rxck6cEhBS9DolNwzajs0ZatpPaeYvGhTZUv8JFOvMAuUHfvTFPSDvEIYRNQ",
+                    "width" : 4128
+                }
+            ],
+            "place_id" : "ChIJ95M6XszWwoARh1XU3HBLcIE",
+            "plus_code" : {
+                "compound_code" : "2XHM+CR City of Industry, California",
+                "global_code" : "85632XHM+CR"
+            },
+            "price_level" : 2,
+            "rating" : 4.1,
+            "reference" : "ChIJ95M6XszWwoARh1XU3HBLcIE",
+            "scope" : "GOOGLE",
+            "types" : [
+                "restaurant",
+                "meal_delivery",
+                "cafe",
+                "bar",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "vicinity" : "13131 Crossroads Pkwy S, City of Industry"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.9379747,
+                    "lng" : -117.2764983
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.93932452989272,
+                        "lng" : -117.2751484701073
+                    },
+                    "southwest" : {
+                        "lat" : 33.93662487010727,
+                        "lng" : -117.2778481298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "16336e2c13824a7a5d823aaadf7d646fcacadc9a",
+            "name" : "Cafe Rio Mexican Grill",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 3024,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/116897097189030600279/photos\"\u003eCEO Geōrgos\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAALDzHnXmk0aIJ5YHGPiApIoLtLyvE-Ak46M_G7Qa_DtBSxOS2WooPk3_lCccmOIkmp3bZL7geQDX0ANrElpN-k8BzPH9d2qGM4Lr_hCkCy1tsauWhybg-5Yl8xFYlX4o6EhCQp2RsSnSbZAQ7tPN87145GhRIaJNcZRV9YtIo-DD5kllSPWkJ3w",
+                    "width" : 3024
+                }
+            ],
+            "place_id" : "ChIJ_9NMJ1ev3IARyisGS3DRcY8",
+            "plus_code" : {
+                "compound_code" : "WPQF+5C Moreno Valley, California",
+                "global_code" : "8554WPQF+5C"
+            },
+            "rating" : 4.1,
+            "reference" : "ChIJ_9NMJ1ev3IARyisGS3DRcY8",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "12560 Day St, Moreno Valley"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.74769819999999,
+                    "lng" : -117.8092395
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.74910767989272,
+                        "lng" : -117.8080152201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.74640802010727,
+                        "lng" : -117.8107148798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "c057bf8c65bc5964e3c21ad0564035b6a2a0f1ca",
+            "name" : "Cafe Rio Mexican Grill",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 1520,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/108038483432791368633/photos\"\u003eScott Olson\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAZAXxKrtiMHIXuCTgiSIuTDK498z96YdP-Dbk19_feGC2io2H82eI5hgpOvBtgR5hyPVWa34da5YdZ_BtSNibf8LZ05XdEaKKbncTf3RzI3PbtDUWx763hmb5AGf5L94XEhC1fBKuEcJqbd81QTb-7_HnGhQxjATA2R0X2o-5by6nt1VHk2F52A",
+                    "width" : 2688
+                }
+            ],
+            "place_id" : "ChIJrfm5x8Db3IAREH_kq-AAz04",
+            "plus_code" : {
+                "compound_code" : "P5XR+38 Tustin, California",
+                "global_code" : "8554P5XR+38"
+            },
+            "price_level" : 1,
+            "rating" : 4.2,
+            "reference" : "ChIJrfm5x8Db3IAREH_kq-AAz04",
+            "scope" : "GOOGLE",
+            "types" : [
+                "meal_takeaway",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "vicinity" : "1140 Irvine Blvd, Tustin"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.877841,
+                    "lng" : -117.88162
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.87930092989272,
+                        "lng" : -117.8802706201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.87660127010728,
+                        "lng" : -117.8829702798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "c7d3c5b70933d89ba8dbc51318e4745483dbbcfa",
+            "name" : "Cafe Rio",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 3024,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/117747942348730953641/photos\"\u003eSkandha Ch\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA5b9PgDCu9FFOGF9X7fQRGgBz32MQsz-Ne1KJDq94quxUKFt0Oohn2miXmwfpL6DsUzp-A9nl7dj7sDLLEXPZabVuTGHyNBxpyVam7_Cai1HWEHHLzJU7c8ueSz30eL7xEhB_JURnnJZOE8rC90yanO1eGhRLv59xkqY9rHl9yZGixusvMHNhEg",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJM9JoUtLV3IARs0id8uQ6eFQ",
+            "plus_code" : {
+                "compound_code" : "V4H9+49 Fullerton, California",
+                "global_code" : "8554V4H9+49"
+            },
+            "rating" : 4.2,
+            "reference" : "ChIJM9JoUtLV3IARs0id8uQ6eFQ",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "2736 Nutwood Ave, Fullerton"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 34.1060845,
+                    "lng" : -117.5675401
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 34.10759427989272,
+                        "lng" : -117.5661888201073
+                    },
+                    "southwest" : {
+                        "lat" : 34.10489462010727,
+                        "lng" : -117.5688884798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "089ba40e751ded0731bcfc37ca7d8ef4dbf9f00d",
+            "name" : "Cafe Rio Mexican Grill",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 2265,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/114845924642901894343/photos\"\u003eBuddo Hood\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAACzn02T_43jngPw8anmSBshSuDRNx9h_atN5h56zbXqGVTOKK0VadGLMz32Q9RaOOuecszIk7I0YYL3z2_HSTgIosAdgTB3Bu1t_ZekgTeUIfYY3r-GL0NZ4hZNcryyueEhAw6fdWLCzcFlPSXFPGgACYGhQ57KdPdjRjhm2xs9rV2_zUpXQ4hQ",
+                    "width" : 1960
+                }
+            ],
+            "place_id" : "ChIJcV29_eM1w4ARgdlzZr7sv20",
+            "plus_code" : {
+                "compound_code" : "4C4J+CX Rancho Cucamonga, California",
+                "global_code" : "85644C4J+CX"
+            },
+            "rating" : 4.3,
+            "reference" : "ChIJcV29_eM1w4ARgdlzZr7sv20",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "10895 E Foothill Blvd, Rancho Cucamonga"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 34.1136186,
+                    "lng" : -117.8271786
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 34.11482362989272,
+                        "lng" : -117.8258277201073
+                    },
+                    "southwest" : {
+                        "lat" : 34.11212397010728,
+                        "lng" : -117.8285273798928
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "0415e4a21d8c0e41e6dfa977c2214d8209f3ebf4",
+            "name" : "Cafe Rio Mexican Grill",
+            "opening_hours" : {
+                "open_now" : false
+            },
+            "photos" : [
+                {
+                    "height" : 3024,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/117712158399563940671/photos\"\u003eroy ng\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAPS67ic7uBa5aV1SoD__z7vJDfhw-V-uDRhNiQjA620NvVp2tXmmEkeQWxoPhBf5z77Uk9iBEwpIdKSVCB8GZANmmzx4_qOnfCJ-Dplvos6v6gz2I0C6RtROToYKED4AeEhBjSQZpcwX0KDFHVw-trL8SGhRMp7Rim1SumZFPooLegDGMPSq46Q",
+                    "width" : 4032
+                }
+            ],
+            "place_id" : "ChIJ8zIdjksvw4ARBJHLlrhyjpk",
+            "plus_code" : {
+                "compound_code" : "457F+C4 San Dimas, California",
+                "global_code" : "8564457F+C4"
+            },
+            "rating" : 4.3,
+            "reference" : "ChIJ8zIdjksvw4ARBJHLlrhyjpk",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "1042 E Gladstone St, San Dimas"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.811122,
+                    "lng" : -118.167952
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.81240527989273,
+                        "lng" : -118.1666024701073
+                    },
+                    "southwest" : {
+                        "lat" : 33.80970562010728,
+                        "lng" : -118.1693021298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "9417083186d44a2c8ca05600b18716204e63e09b",
+            "name" : "Delius Restaurant",
+            "permanently_closed" : true,
+            "photos" : [
+                {
+                    "height" : 2048,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/108679789784785407995/photos\"\u003eDelius Restaurant\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAP7nFc2JLjDeKNXKVVLxrCr2kHCv_wGWq8WSFGW1CJZfiYaIusb4F5tjD6LjQ3Ge4YZuQz37h3oXGvBX6rkJS7Ip3g7EHu9EX5EQ8FdWmE1eIwkYaG52WAztGd5MdonB2EhBwIK0alPTgws61MdlEyq3oGhTdarpKv4YTo6MdZBDUo89r10k08g",
+                    "width" : 1365
+                }
+            ],
+            "place_id" : "ChIJuSbnOJEz3YARXlrB-Z9boKQ",
+            "plus_code" : {
+                "compound_code" : "RR6J+CR Signal Hill, California",
+                "global_code" : "8553RR6J+CR"
+            },
+            "price_level" : 2,
+            "rating" : 4.3,
+            "reference" : "ChIJuSbnOJEz3YARXlrB-Z9boKQ",
+            "scope" : "GOOGLE",
+            "types" : [ "bar", "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "2951 Cherry Ave, Signal Hill"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.6659383,
+                    "lng" : -117.865795
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.66730492989272,
+                        "lng" : -117.8642872701073
+                    },
+                    "southwest" : {
+                        "lat" : 33.66460527010728,
+                        "lng" : -117.8669869298927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "559c687525d245d2ead354274cd0dcd5f446c2a6",
+            "name" : "Tapas Flavors of Spain Restaurant",
+            "permanently_closed" : true,
+            "photos" : [
+                {
+                    "height" : 2952,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/108955804611975314982/photos\"\u003eAlbert Zhou\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAi03XJidJ41GyHrhaCUXhn-rbUsISBgmGpCKLVbq5L5sRA3w2ukDLWlzshENg2r8OpE-MM7MnFQ3PRU3CScCy3uW_HFBqxSbW41D6arJKp4NU8BERaxAGfxb-cRxeqoo9EhDo8ytoWALddq1bgJFPJVC4GhTBUWlqTQdaTUFkY4E67IR2YqfgqQ",
+                    "width" : 5248
+                }
+            ],
+            "place_id" : "ChIJNykBOlje3IARCU4n_oaqubk",
+            "plus_code" : {
+                "compound_code" : "M48M+9M Newport Beach, California",
+                "global_code" : "8554M48M+9M"
+            },
+            "price_level" : 2,
+            "rating" : 3.5,
+            "reference" : "ChIJNykBOlje3IARCU4n_oaqubk",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "4253 Martingale Way, Newport Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.6219175,
+                    "lng" : -117.9236793
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.62320377989272,
+                        "lng" : -117.9221997201072
+                    },
+                    "southwest" : {
+                        "lat" : 33.62050412010728,
+                        "lng" : -117.9248993798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "3249aa5caa58d5e4588348d72a13e33fb78d210d",
+            "name" : "Nesai Restaurant",
+            "permanently_closed" : true,
+            "place_id" : "ChIJEwdfF_jf3IARS3FT6D2e5Xg",
+            "plus_code" : {
+                "compound_code" : "J3CG+QG Newport Beach, California",
+                "global_code" : "8554J3CG+QG"
+            },
+            "price_level" : 2,
+            "rating" : 3,
+            "reference" : "ChIJEwdfF_jf3IARS3FT6D2e5Xg",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "bar", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "215 Riverside Ave #17, Newport Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.7081692,
+                    "lng" : -117.953654
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.70960212989272,
+                        "lng" : -117.9523039701073
+                    },
+                    "southwest" : {
+                        "lat" : 33.70690247010727,
+                        "lng" : -117.9550036298928
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "1e36f9dff53314449355d832a18fffc83daac96e",
+            "name" : "Fusion Bites Restaurant",
+            "permanently_closed" : true,
+            "photos" : [
+                {
+                    "height" : 540,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/116691257974687772758/photos\"\u003eFusion Bites Restaurant\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAANaDHy0tQwoNbSekzra8k1se7rKSD-kEr2guIChZBaxe2ayAgkcMYovJWzTM8R8ZduUbSnqnTH3wrHsxyKX-JwtUfhGL75JE7dkNnN7HAnxWQL0EZdf7hQnQDxhCSdgWsEhBJLluPRF5jRgbB137uA-OEGhTKLogfG-tQ42XfdFtUogpRA2dhNg",
+                    "width" : 720
+                }
+            ],
+            "place_id" : "ChIJSZ72-hUn3YARi_f0FuKzSJ4",
+            "plus_code" : {
+                "compound_code" : "P25W+7G Fountain Valley, California",
+                "global_code" : "8554P25W+7G"
+            },
+            "rating" : 4.4,
+            "reference" : "ChIJSZ72-hUn3YARi_f0FuKzSJ4",
+            "scope" : "GOOGLE",
+            "types" : [ "bar", "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "17550 Brookhurst St, Fountain Valley"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.716188,
+                    "lng" : -117.9730922
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.71753697989272,
+                        "lng" : -117.9718575201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.71483732010728,
+                        "lng" : -117.9745571798927
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "8dd27da974838891600fd548f478890ba5fb96c2",
+            "name" : "OPM Restaurant & Lounge",
+            "permanently_closed" : true,
+            "photos" : [
+                {
+                    "height" : 3680,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/102802014256716078677/photos\"\u003eOPM Restaurant &amp; Lounge\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA6I4zt6N5rEyPKeQIO-nTVHPrwaSryEcORZ875xMYlLiGafV2LBdgeJBau2S7TVVOGEsqnSmLYfTz-Vz--U3dIlJ78L_bMZHzEfNXAtiN6VoXwgiV7cblKk5lwi7dMHN6EhBrnROAEV1qs_F01HfAXTDcGhR7j08wNK3hrogwDwMAG6MiWUF5EQ",
+                    "width" : 5520
+                }
+            ],
+            "place_id" : "ChIJDettdf0m3YARTKbeFuSCgdI",
+            "plus_code" : {
+                "compound_code" : "P28G+FQ Huntington Beach, California",
+                "global_code" : "8554P28G+FQ"
+            },
+            "rating" : 4.1,
+            "reference" : "ChIJDettdf0m3YARTKbeFuSCgdI",
+            "scope" : "GOOGLE",
+            "types" : [ "restaurant", "point_of_interest", "food", "establishment" ],
+            "vicinity" : "8901 Warner Ave, Huntington Beach"
+        },
+        {
+            "geometry" : {
+                "location" : {
+                    "lat" : 33.654505,
+                    "lng" : -117.7802273
+                },
+                "viewport" : {
+                    "northeast" : {
+                        "lat" : 33.65593507989272,
+                        "lng" : -117.7787693201073
+                    },
+                    "southwest" : {
+                        "lat" : 33.65323542010728,
+                        "lng" : -117.7814689798928
+                    }
+                }
+            },
+            "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id" : "7d5d8460f314c01d1830bfcac31bdd98fb8d7ae3",
+            "name" : "Lucca Cafe",
+            "permanently_closed" : true,
+            "photos" : [
+                {
+                    "height" : 1125,
+                    "html_attributions" : [
+                        "\u003ca href=\"https://maps.google.com/maps/contrib/112003457512277378087/photos\"\u003eLucca Cafe &amp; Market\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAoGRwUZ3ppSeHBbuQyM-SyVUh28NQqQEMza93DauFQCOLjcwJx8raGI_SUqtCkaasltMENhGsOScMI1EGBGh8fhqWVfBn3eEKMH5ZLw1k7rBcjWl9eHTsgcPCovm5rsc2EhCK9JHjaSLYGr9jMUSHUvrPGhSlTYLyYSHj2WArc0QBPREXjbw-WQ",
+                    "width" : 1500
+                }
+            ],
+            "place_id" : "ChIJH7QiQHnd3IARzsLAJ33P0pE",
+            "plus_code" : {
+                "compound_code" : "M639+RW Irvine, California",
+                "global_code" : "8554M639+RW"
+            },
+            "price_level" : 3,
+            "rating" : 3.8,
+            "reference" : "ChIJH7QiQHnd3IARzsLAJ33P0pE",
+            "scope" : "GOOGLE",
+            "types" : [
+                "bar",
+                "store",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "vicinity" : "6507 Quail Hill Pkwy, Irvine"
+        }
+    ],
+    "status" : "OK"
+};
+
+        // var map;
+        // var service;
+        // var infowindow;
+        //
+        //
+        // var mapCenter = new google.maps.LatLng(34.068871,-117.651215);
+        //
+        // map = new google.maps.Map(document.getElementById('map'), {
+        //     center: mapCenter,
+        //     zoom: 15
+        // });
+        //
+        // var request = {
+        //     //query: 'Permanently closed',
+        //     //keyword: 'Permanently closed',
+        //     location: mapCenter,
+        //     radius: 50000,
+        //     type: 'restaurant'
+        // };
+        //
+        // service = new google.maps.places.PlacesService(map);
+        // service.nearbySearch(request, callback);
+        //
+        //
+        // function callback(results, status, pagination) {
+        //     console.log(pagination);
+        //     let closed = results.filter(function (item) {
+        //         return true || item.permanently_closed;
+        //     });
+        //
+        //     let body = $('#main-table tbody');
+        //
+        //
+        //     closed.forEach(function (item) {
+        //         let tr = $('<tr>');
+        //         tr.append($('<td>').text(item.name));
+        //         tr.append($('<td>').text(item.vicinity));
+        //         tr.append($('<td>').text(item.permanently_closed));
+        //         body.append(tr);
+        //     })
+        //
+        //     let getNextPage = pagination.hasNextPage && function() {
+        //         pagination.nextPage();
+        //     };
+        //
+        //     if (pagination.hasNextPage) {
+        //         getNextPage()
+        //     }
+        // }
+
+        // jQuery.ajax({
+        //     url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.068871,-117.651215&radius=50000&type=restaurant&keyword=permanently_closed&key=AIzaSyBW0EVGUXbmMldzUxYliptqE_h8WWR8vqU',
+        //     dataType: 'jsonp',
+        //     method: 'GET',
+        //     success: function (response) {
+        //         console.log(response);
+        //     }
+        // })
+/*            .error(function (response) {
+                alert(response)
+            })
+            .done(function (response) {
+
+            })*/
+
+            let closed = response.results.filter(function (item) {
+                return item.permanently_closed;
+            });
+
+            let body = $('#main-table tbody');
+
+
+            closed.forEach(function (item) {
+                let tr = $('<tr>');
+                tr.append($('<td>').text(item.name));
+                tr.append($('<td>').text(item.vicinity));
+                body.append(tr);
+            })
+    });
+
+    </script>
+<style>
+    .container {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+</style>
+</body>
+</html>
