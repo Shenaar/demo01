@@ -1910,13 +1910,15 @@
             closed.forEach(function (item) {
                 let tr = $('<tr>');
                 let td = $('<td>');
-                if (item.photos && item.photos.length) {
-                    let a = $(item.photos[0].html_attributions[0]).attr('target', '_blank');
-                    td.append(a);
-                    console.log(a);
-                } else {
-                    td.text(item.name);
-                }
+
+                let a = $('<a>')
+                    .attr('target', '_blank')
+                    .attr('href', 'https://www.google.com/maps/search/?api=1&query=Google&query_place_id=' + item.place_id)
+                    .text(item.name)
+                ;
+                td.append(a);
+                console.log(a);
+
                 tr.append(td);
                 tr.append($('<td>').text(item.formatted_address));
                 body.append(tr);
